@@ -50,12 +50,32 @@ body {
 }
 
 .box {
-  width: 42rem;
+  width: 48rem;
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  /* overflow: scroll; */
+  overflow: scroll;
   position: relative;
+  box-sizing: border-box;
+}
+
+.box::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+  /* širina trake za skrolovanje */
+}
+
+.box::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* background-color: rgba(136, 136, 136, 0); */
+  /* boja ručice */
+  border-radius: 6px;
+  /* zaobljenost ručice */
+  border: 2px solid transparent;
+  /* opcionalno: dodaje transparentni border oko ručice */
+  background-clip: padding-box;
+  /* sprečava da boja pozadine "curi" izvan bordera */
+  /* transition: background-color 0.3s ease; */
 }
 
 .loader {
